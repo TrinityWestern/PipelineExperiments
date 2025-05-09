@@ -10,7 +10,7 @@ class Program
         string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnection"].ConnectionString;
 
         // SQL query to select "Hello World"
-        string query = "SELECT 'Hello World from SQL Server!' [Message]";
+        string query = "SELECT CONCAT('Hello World from ', @@SERVERNAME, '!') [Message]";
 
         try
         {
